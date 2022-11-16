@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var math = parseInt(prompt('Math: '));
+        var english = parseInt(prompt('English: '));
+        var kiswahili = parseInt(prompt('Kiswahili: '));
+        var science =parseInt(prompt('Science: '));
+        var sst = parseInt (prompt('Social Studies: '));
+        var totalMarks = parseInt(math + english + kiswahili + science + sst)
+        var average = totalMarks/5
+        var grade;
+        function getGrade(marks){
+            
+            if (marks >= 85){
+                grade = 'A'
+            }else if (marks >= 78){
+                grade = 'A-'
+            }else if (marks >= 70){
+                grade = 'B+'
+            }else if (marks >= 65){
+                grade = 'B'
+            }else if (marks > 60){
+                grade = 'B-'
+            }else if (marks > 54){
+                grade = 'C+'
+            }else if (marks >48){
+                grade = 'C'
+            }else if (marks >39){
+                grade = 'D+'
+            }else if (marks > 30){
+                grade = 'D'
+            }else if (marks > 24){
+                grade = 'D-'
+            }else {
+                grade = 'E'
+            }
+            return grade
+        }
+        m = getGrade(math)
+        e = getGrade(english)
+        k = getGrade(kiswahili)
+        s = getGrade(science)
+        t = getGrade(sst)
+        a = getGrade(average)
+
+        
+        console.log('+------------------------------------------+')
+        console.log('|        RESULT FOR STUDENT 1              |')
+        console.log('+------------------------------------------+')
+        console.log('|Subject         |Marks       |Grade       |')
+        console.log('+------------------------------------------+')
+        console.log('|Mathematics     |'+math +'          |'+ m +'           |')
+        console.log('+------------------------------------------+')
+        console.log('|English         |'+english +'          |' + e +'           |')
+        console.log('+------------------------------------------+')
+        console.log('|Kiswahili       |'+kiswahili +'          |' + k +'          |')
+        console.log('+------------------------------------------+')
+        console.log('|Science         |'+science +'          |' + s +'          |')
+        console.log('+------------------------------------------+')
+        console.log('|Social Studies  |'+sst +'          |' + t +'           |')
+        console.log('+------------------------------------------+')
+        console.log('|Total Marks     |                      '+totalMarks+'|')
+        console.log('+------------------------------------------+')
+        console.log('|Overall Grade   |                       '+ a+'|')
+        console.log('+------------------------------------------+')
+
+
+    </script>
+</body>
+</html>
